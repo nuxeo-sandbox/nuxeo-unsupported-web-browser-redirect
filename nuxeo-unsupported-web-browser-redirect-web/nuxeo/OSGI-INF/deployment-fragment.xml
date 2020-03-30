@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<fragment version="1">
+
+    <!-- Unzip the web resources into the server -->
+    <install>
+        <unzip from="${bundle.fileName}" to="/">
+            <include>nuxeo.war/**</include>
+        </unzip>
+    </install>
+
+    <!--  IE Webui redirect -->
+    <extension target="rewrite#RULE">
+        RewriteCond  %{HTTP_USER_AGENT} ^.*(?:\b(?:MS)?IE\s+|\bTrident\/7\.0;.*\s+rv:)(?:\d+).*$
+        RewriteRule ^/ui/(.*) /notsupported?path=/ui/$1 [R,L]
+    </extension>
+
+</fragment>
