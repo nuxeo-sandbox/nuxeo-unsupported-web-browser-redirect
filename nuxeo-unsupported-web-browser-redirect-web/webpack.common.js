@@ -7,6 +7,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 dotenv.config();
 
 module.exports = {
+    target: ['web', 'es5'],
     entry: {
         index: './src/index.js'
     },
