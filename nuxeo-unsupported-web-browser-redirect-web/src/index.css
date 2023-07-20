@@ -1,7 +1,7 @@
 body {
   width: 100%;
   margin: 0px;
-  background: url(/nuxeo/img/login_bg.jpg) no-repeat center center fixed #006ead;
+  background: url(/nuxeo/img/login-bg.svg) center no-repeat #f2f2f2;
   background-size: cover;
   font-family: neue-haas-grotesk-display,Helvetica,Arial,sans-serif!important;
 }
