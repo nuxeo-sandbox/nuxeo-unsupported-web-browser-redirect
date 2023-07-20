@@ -11,7 +11,9 @@ module.exports = merge(common, {
     devServer: {
         compress: true,
         hot: true,
-        publicPath: '/dist',
+        devMiddleware: {
+            publicPath: '/dist'
+        },
         proxy: {
             '/nuxeo': {
                 target: process.env.DEV_SERVER_URL,
