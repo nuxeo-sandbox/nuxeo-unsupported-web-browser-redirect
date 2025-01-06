@@ -17,7 +17,7 @@
   ~  Contributors:
   ~     Nelson Silva <nsilva@nuxeo.com>
   -->
-<project name="Nuxeo ECM" default="build" basedir=".">
+<project name="Nuxeo Unsupported Web Browser Redirect " default="build" basedir=".">
 
   <!-- set executable names based on OS family -->
   <condition property="cmd.npm" value="npm.cmd" else="npm">
@@ -27,7 +27,7 @@
     <os family="windows"/>
   </condition>
 
-  <target name="init" description="Download all node and web dependencies">
+  <target name="init" description="Download all node dependencies">
     <exec executable="${cmd.npm}" failonerror="true">
       <arg value="install" />
     </exec>
